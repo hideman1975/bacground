@@ -1,4 +1,4 @@
-import { Component, ComponentRef, ViewChild, ViewContainerRef, TemplateRef, AfterViewInit } from '@angular/core';
+import { Component, ComponentRef, ViewChild, ViewContainerRef } from '@angular/core';
 import { TestInputComponent } from './test-input/test-input.component';
 import { TestNumberComponent } from './test-number/test-number.component';
 import { TestCheckboxComponent } from './test-checkbox/test-checkbox.component';
@@ -30,7 +30,6 @@ export class AppComponent {
   }
 
   load() {
-
     this.getData('././assets/data/form-config.json').subscribe(data => {
       this.json = data;
       this.clearJson = JSON.parse(JSON.stringify(this.json));
@@ -59,7 +58,6 @@ export class AppComponent {
       } else if (item.type === 'select') {
         let inputRef!: ComponentRef<TestSelectComponent>;
         inputRef = this.viewRef.createComponent(TestSelectComponent);
-        item.zindex
         inputRef.setInput('options', item)
         this.widgets.push(inputRef)
       }
