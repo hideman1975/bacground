@@ -1,0 +1,11 @@
+<div class="wrapper">
+    <div class="group-label">{{ options.label }}</div>
+    <div class="group-block">
+        <div class="single-box" *ngFor="let item of options.checks; let i = index;">
+            <div class="checkbox" (click)="check(item)" [ngClass]="{ checked: item.checked }">
+                <img *ngIf="item.checked" class="check-icon" src="././assets/images/checked.png" alt="checked">
+            </div>
+            <div class="label">{{ item.label }}</div>
+        </div>    
+    </div>
+</div>

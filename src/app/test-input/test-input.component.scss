@@ -1,0 +1,68 @@
+.input-wrapper {
+    width: 700px;
+    margin: 10px 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 17px;
+    line-height: 22px;
+    
+    .input-label {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 44px;
+}
+
+    .input-value-block {
+        display: flex;
+        flex-direction: column;
+
+        .input-value-item {
+            margin: 5px 0;
+               display: flex;
+               align-items: center;
+              
+                .input-window {
+                    display: flex;
+                    flex-direction: column;
+
+                    .input-validation-message {
+                        font-family: Verdana, Geneva, Tahoma, sans-serif;
+                        font-size: 13px;
+                        line-height: 16.82px;
+                        text-align: left;
+                        color: #9D9D9D;
+                    }
+                }
+
+               .input-value {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 17px;
+                line-height: 22px;
+                display: flex;
+                align-items: center;
+                padding: 0 8px;
+                border: 1px solid grey;
+                width: 300px;
+                height: 44px;
+            }
+
+               .input-action {
+                   display: flex;
+
+                   .input-add-action {
+                    display: flex;
+                   }
+               }
+       
+               .input-plus {
+                   width: 26px;
+                   height: 26px;
+                   margin: 0 8px;
+               }
+           }
+    }
+}
+

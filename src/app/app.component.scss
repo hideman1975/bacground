@@ -1,0 +1,27 @@
+.form-element {
+    margin-top: 10px;
+}
+
+.form-content {
+    display: flex; 
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.action-block {
+    margin: 10px 10px;
+    
+    button {
+        background-color: #FFE783;
+        width: 139px;
+        height: 52px;
+        font-size: 17px;
+        border-radius: 3px;
+        margin: 5px 5px;
+        cursor: pointer;
+        &:hover {
+            opacity: 70%;
+        }
+    }
+}
+

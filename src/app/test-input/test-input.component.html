@@ -1,0 +1,19 @@
+<div class="input-wrapper">
+    <div class="input-label">{{ options?.label }}</div>
+    <div class="input-value-block">
+        <div *ngFor="let item of options.items; let i = index;" class="input-value-item">
+            <div class="input-window">
+                <input class="input-value" type="text" size="40" [(ngModel)]="options.items[i].value" [placeholder]="options.placeholder">
+                <div *ngIf="!options.items[i].value" class="input-validation-message">{{ options.validationMessage}}</div>
+            </div>
+            
+            <div class="input-action">
+                <img *ngIf="options.items.length > 1" class="input-plus" src="././assets/images/close.png" (click)="removeItem(item)">
+                <div class="input-add-action" *ngIf="i === options.items.length-1">
+                    <img  class="input-plus" src="././assets/images/plus.png" (click)="addItem()">
+                    <div class="input-button">Добавить ещё</div>
+                </div>
+            </div>
+        </div>    
+    </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="wrapper">
+    <div class="label">{{options.label}}</div>
+
+    <div class="number-container">
+        <input type="text" class="number-value" [(ngModel)]="options.value" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
+        <div class="number-controll">
+            <div class="number-controll-wrapper" (click)="increase()"><img class="number-controll-button" src="././assets/images/triangleup.png"></div>
+            <div class="number-controll-wrapper" (click)="decrease()"><img class="number-controll-button" src="././assets/images/triangledown.png"></div>
+        </div>
+    </div>    
+</div>
+

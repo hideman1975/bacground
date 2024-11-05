@@ -1,0 +1,27 @@
+<div class="wrapper">
+    <div>{{ options.label}}</div>
+
+    <div class="container" [ngStyle]="{'z-index': zIndex}">
+        <div class="button" (click)="isDropdownActive = true">
+            <div class="buttton-content">
+                <div class="select-input">{{ options.selectedOptions?.name || options.placeholder}}</div>
+                <div *ngIf="isDropdownActive"><img class="chevron" src="././assets/images/chevron-top.png" alt="top">
+                </div>
+                <div *ngIf="!isDropdownActive"><img class="chevron" src="././assets/images/chevron-down.png" alt="down">
+                </div>
+            </div>
+
+            <div id="dropdown" [ngClass]="{active: isDropdownActive}">
+                <div id="ul">
+                    <div class="li" *ngFor="let option of options.list"
+                        [ngClass]="{selected: options.selectedOptions && option.name === options.selectedOptions.name}">
+                        <div class="option"
+                            (click)="options.selectedOptions=option; isDropdownActive=false; $event.stopPropagation();">
+                            {{ option.name }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

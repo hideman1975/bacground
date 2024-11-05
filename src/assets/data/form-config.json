@@ -1,0 +1,184 @@
+ [
+  {
+    "type": "select",
+    "field": "married",
+    "label": "Семейное положение",
+    "placeholder": "",
+    "selectedOptions": null,
+    "required": true,
+    "list": [
+      {
+        "name": "Женат / Замужем",
+        "value": true
+      },
+      {
+        "name": "Не женат / Не заужем",
+        "value": false
+      }
+    ],
+    "index": null
+  },
+  {
+    "type": "select",
+    "field": "birthplace",
+    "label": "Место рождения",
+    "placeholder": "Выберите регион",
+    "selectedOptions": null,
+    "required": false,
+    "list": [
+      {
+        "name": "не важно",
+        "value": "00"
+      },
+      {
+        "name": "Адыгея",
+        "value": "01"
+      },
+      {
+        "name": "Башкортостан",
+        "value": "02"
+      },
+      {
+        "name": "Бурятия",
+        "value": "03"
+      },
+      {
+        "name": "Алтай",
+        "value": "04"
+      },
+      {
+        "name": "Дагестан",
+        "value": "05"
+      },
+      {
+        "name": "Ингушетия",
+        "value": "06"
+      },
+      {
+        "name": "Кабардино-Балкария",
+        "value": "07"
+      },
+      {
+        "name": "Калмыкия",
+        "value": "08"
+      },
+      {
+        "name": "Карачаево-Черкессия",
+        "value": "09"
+      },
+      {
+        "name": "Карелия",
+        "value": "10"
+      },
+      {
+        "name": "Коми",
+        "value": "11"
+      },
+      {
+        "name": "Кемерово",
+        "value": "42"
+      },
+      {
+        "name": "Киров",
+        "value": "43"
+      },
+      {
+        "name": "Кострома",
+        "value": "44"
+      },
+      {
+        "name": "Нижний Новгород",
+        "value": "52"
+      },
+      {
+        "name": "Новгород",
+        "value": "53"
+      },
+      {
+        "name": "Самара",
+        "value": "63"
+      },
+      {
+        "name": "Тверь",
+        "value": "69"
+      }
+    ],
+    "index": null
+  },
+  {
+    "type": "checkbox",
+    "field": "interests",
+    "label": "Интересы",
+    "required": false,
+    "checks": [
+      {
+        "checked": false,
+        "label": "Музыка"
+      },
+      {
+        "checked": false,
+        "label": "Чтение"
+      },
+      {
+        "checked": true,
+        "label": "Спорт"
+      },
+      {
+        "checked": true,
+        "label": "Туризм"
+      },
+      {
+        "checked": false,
+        "label": "Прогулки"
+      },
+      {
+        "checked": false,
+        "label": "Рыбалка"
+      },
+      {
+        "checked": true,
+        "label": "Охота"
+      },
+      {
+        "checked": true,
+        "label": "История"
+      }
+    ],
+    "index": null
+  },
+  {
+    "type": "number",
+    "field": "age",
+    "label": "Возраст",
+    "value": 0,
+    "index": null
+  },
+  {
+    "type": "text",
+    "field": "education",
+    "label": "Образование",
+    "placeholder": "Например, НГТУ",
+    "validationMessage": "Укажите заведение, в котором учились.",
+    "items": [
+      {
+        "id": 0,
+        "value": ""
+      }
+    ],
+    "required": true,
+    "index": null
+  },
+  {
+    "type": "checkbox",
+    "field": "personal",
+    "label": "Согласие на обработку персональных данных",
+    "required": true,
+    "checks": [
+      {
+        "checked": false,
+        "label": "Согласен"
+      }
+    ],
+    "index": null
+  }
+]

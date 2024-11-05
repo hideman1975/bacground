@@ -1,0 +1,46 @@
+.wrapper {
+    display:flex;
+    width: 333px;
+    align-items: center;
+    justify-content: space-between;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 17px;
+    line-height: 22px;
+}
+
+.number-container {
+    display: flex;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 17px;
+    line-height: 22px;
+    margin: 10px 0;
+    .number-value {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 17px;
+        line-height: 22px;
+        padding: 0 8px;
+        border: 1px solid #C3C3C3;
+        width: 70px;
+        height: 44px;
+    }
+    .number-controll {
+        margin-left: 3px;
+        .number-controll-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #DFDFDF;
+            width: 30px;
+            height: 21px;
+            border: 1px solid white;
+        }
+        .number-controll-button {
+            width: 15px;
+            height: 15px;
+        }    
+    }
+}
+

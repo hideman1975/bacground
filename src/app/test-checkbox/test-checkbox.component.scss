@@ -1,0 +1,46 @@
+
+.wrapper {
+    display: flex;
+    max-height: 200px;
+
+    .group-label {
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 17px;
+        line-height: 22px;
+        width: 300px;
+    }
+
+    .group-block {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .single-box {
+    display: flex;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 17px;
+    line-height: 22px;
+    margin: 10px 0;
+    
+    .label {
+        margin-left: 5px;
+    }
+}
+
+.checkbox {
+    width: 22px;
+    height: 22px;
+    border: 1px solid black;
+    border-radius: 3px;
+
+    .check-icon {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+    .checked {
+        background-color: #FFE783;
+    }
+}
