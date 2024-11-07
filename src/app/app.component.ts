@@ -40,26 +40,32 @@ export class AppComponent {
   renderWidgets() {
     this.json.forEach((item: any, index) => {
       item.index = index;
-      if (item.type === 'text') {
-        let inputRef!: ComponentRef<TestInputComponent>;
-        inputRef = this.viewRef.createComponent(TestInputComponent);
-        inputRef.setInput('options', item)
-        this.widgets.push(inputRef)
-      } else if (item.type === 'checkbox') {
-        let inputRef!: ComponentRef<TestCheckboxComponent>;
-        inputRef = this.viewRef.createComponent(TestCheckboxComponent);
-        inputRef.setInput('options', item)
-        this.widgets.push(inputRef)
-      } else if (item.type === 'number') {
-        let inputRef!: ComponentRef<TestNumberComponent>;
-        inputRef = this.viewRef.createComponent(TestNumberComponent);
-        inputRef.setInput('options', item)
-        this.widgets.push(inputRef)
-      } else if (item.type === 'select') {
-        let inputRef!: ComponentRef<TestSelectComponent>;
-        inputRef = this.viewRef.createComponent(TestSelectComponent);
-        inputRef.setInput('options', item)
-        this.widgets.push(inputRef)
+      switch (item.type) {
+        case 'text':
+          let textRef!: ComponentRef<TestInputComponent>;
+          textRef = this.viewRef.createComponent(TestInputComponent);
+          textRef.setInput('options', item);
+          this.widgets.push(textRef);
+          break;
+        case 'checkbox':
+          let checkRef!: ComponentRef<TestCheckboxComponent>;
+          checkRef = this.viewRef.createComponent(TestCheckboxComponent);
+          checkRef.setInput('options', item);
+          this.widgets.push(checkRef);
+          break;
+        case 'number':
+          let numberRef!: ComponentRef<TestNumberComponent>;
+          numberRef = this.viewRef.createComponent(TestNumberComponent);
+          numberRef.setInput('options', item);
+          this.widgets.push(numberRef);
+          break;
+        case 'select':
+          let selectRef!: ComponentRef<TestSelectComponent>;
+          selectRef = this.viewRef.createComponent(TestSelectComponent);
+          selectRef.setInput('options', item);
+          this.widgets.push(selectRef);
+          break;
+        default: return;
       }
     })
   }
@@ -72,18 +78,17 @@ export class AppComponent {
 
   submit() {
     this.widgets.forEach(item => {
-      if (item.instance.options.type === 'select') {
-        this.formResult[item.instance.options.field] = item.instance.options.selectedOptions;
-      } else
-        if (item.instance.options.type === 'text') {
-          this.formResult[item.instance.options.field] = item.instance.options.items;
-        } else
-          if (item.instance.options.type === 'checkbox') {
-            this.formResult[item.instance.options.field] = item.instance.options.checks;
-          } else
-            if (item.instance.options.type === 'number') {
-              this.formResult[item.instance.options.field] = item.instance.options.value;
-            }
+      switch (item.instance.options.type) {
+        case 'text': this.formResult[item.instance.options.field] = item.instance.options.items;
+          break;
+        case 'select': this.formResult[item.instance.options.field] = item.instance.options.selectedOptions;
+          break;
+        case 'checkbox': this.formResult[item.instance.options.field] = item.instance.options.checks;
+          break;
+        case 'number': this.formResult[item.instance.options.field] = item.instance.options.value;
+          break;
+        default: return;
+      }
     })
 
     console.log('Sent to server:', this.formResult);
